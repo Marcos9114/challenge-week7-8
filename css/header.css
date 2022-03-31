@@ -1,10 +1,8 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    transition: 0.7s;
-    background-color: #ffffff;
+    display: grid;
+    grid-template-areas:
+    "header header header";
+    background-color: #7a2323;
     margin: auto;
     height: 115px;
 }
