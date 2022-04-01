@@ -1,0 +1,44 @@
+.banner {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    background: url(../img/banner-imagen.png) center / cover no-repeat;
+    
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    justify-items: start;
+    align-items: end;
+}
+
+.banner div{
+    grid-column: 2 / 3;
+    padding-bottom: 2vw;
+}
+
+.banner div h1{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+.banner div p{
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #ffffff;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+.banner__button{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: #2A7AE4;
+    box-sizing: content-box;
+    width: 15vw;
+    height: 3vw;
+    min-height: 45px;
+
+    border: none;
+}

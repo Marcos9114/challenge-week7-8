@@ -1,0 +1,5 @@
+.list-card{
+    background-color: hsl(59, 47%, 39%);
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+}

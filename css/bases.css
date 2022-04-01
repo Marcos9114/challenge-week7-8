@@ -1,8 +1,14 @@
-body{
+.container{
     width: 80%;
     font-family: 'Raleway', sans-serif;
     font-size: 1rem;
     margin: auto;
-    background-color: black;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 10vw 30vw 100vw 30vw 5vw;
+    grid-template-columns: auto 80vw auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
