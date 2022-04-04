@@ -95,7 +95,7 @@
 
 @media screen and (max-width: 768px) {
   .contact {
-    grid-template-columns: 5vw 95vw 5vw;
+    grid-template-columns: 5vw 90vw 5vw;
   }
   .contact__img-descripcion {
     flex-direction: column;

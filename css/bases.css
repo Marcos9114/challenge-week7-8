@@ -1,3 +1,4 @@
+/* container de index.html */
 .container {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
@@ -8,3 +9,6 @@
   box-sizing: border-box;
 }
 
+.login__container{
+  display: block;
+}

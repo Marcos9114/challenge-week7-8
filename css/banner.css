@@ -46,7 +46,7 @@
 
 @media screen and (max-width: 768px) {
   .banner {
-    grid-template-columns: 5vw 95vw 5vw;
+    grid-template-columns: 5vw 90vw 5vw;
     
   }
   .banner__button {
