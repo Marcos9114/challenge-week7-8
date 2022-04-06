@@ -91,6 +91,7 @@
   width: 15vw;
   height: 3vw;
   min-height: 40px;
+  min-width: 120px;
 }
 
 @media screen and (max-width: 768px) {
@@ -105,6 +106,9 @@
   }
   .contact__form {
     width: calc(19vw * 3);
+  }
+  .contact__form button {
+    font-size: 14px;
   }
 }
 
