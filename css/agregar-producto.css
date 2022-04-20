@@ -38,7 +38,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+}
+
+.agregar-producto__arrastre.active{
+    background-color: #b8d4fe;
+    color: black;
+    border: 2px dashed #070d16;
 }
 
 .agregar-producto__arrastre p {
@@ -59,7 +64,7 @@
     box-sizing: content-box;
     height: 51px;
     width: 140px;
-
+    cursor: pointer;
     border: 1px solid #2a7ae4;
     background-color: #ffffff;
 
@@ -113,6 +118,33 @@
     width: 560px;
     height: 51px;
     padding: 0;
+}
+
+
+/* creacion de clases que usaremos de forma dinámica con js*/
+
+.file-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: solid 1px #ddd;
+}
+
+#preview{
+    margin-top: 10px;
+}
+
+.status-tex {
+    padding: 0 10px;
+}
+
+.success{
+    color: #52ad5a;
+}
+
+.failure {
+    color: red;
 }
 
 @media screen and (max-width: 768px) {
