@@ -55,6 +55,18 @@
 
   border: 1px solid #2a7ae4;
   background-color: #ffffff;
+  cursor: pointer;
+}
+
+.header__button:hover{
+  color: #ffffff;
+  background-color: #95bef5;
+}
+
+.header__button:active{
+  color: #ffffff;
+  background-color: #0f3b74;
+  border: solid 2px #ffffff;
 }
 
 @media screen and (max-width: 768px) {

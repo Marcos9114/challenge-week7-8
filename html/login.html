@@ -16,7 +16,7 @@
 
 <body class="container login__container">
     <header class="header">
-        <img class="header__img" src="../img/Logo.png" alt="">
+        <a href="../index.html"><img class="header__img" src="../img/Logo.png" alt="" /></a>
         <div class="header__div-icon">
             <input class="header__input" type="text" placeholder="¿Que desea buscar?">
             <span class="header__icon">
@@ -30,19 +30,20 @@
         <h1>Iniciar Sección</h1>
         <form action="../html/nuevo-producto.html">
             <div class="input-container">
-                <input class="login__email" type="email" name="email" id="email" 
-                placeholder="Escriba su correo electrónico" data-tipo="email" required>
+                <label for="email"></label>
+                <input class="login__email" type="email" name="email" id="email"
+                    placeholder="Escriba su correo electrónico" data-tipo="email" required>
                 <span class="input-message-error">Este campo no es valido</span>
             </div>
-            
+
             <div class="input-container">
-                <input class="login__password" type="password" name="password" 
-                id="password" placeholder="Escriba su contraseña" data-tipo="password" 
-                required>
+                <label for="password"></label>
+                <input class="login__password" type="password" name="password" id="password"
+                    placeholder="Escriba su contraseña" data-tipo="password" required>
                 <span class="input-message-error">Este campo no es valido</span>
             </div>
-        
-            <button>Entrar</button>
+
+            <button >Entrar</button>
         </form>
 
     </section>
@@ -62,19 +63,24 @@
                 </div>
             </div>
 
-            <div class="contact__form">
-                <h1>Escribe tu mensaje</h1>
+            <form action="../html/registro_completado.html">
+                <div class="contact__form">
+                    <h1>Escribe tu mensaje</h1>
 
-                <div class="contact__form-nombre">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" required data-tipo="nombre">
-                    <span class="input-message-error">Este campo no es valido</span>
+                    <div>
+                        <div class="contact__form-nombre">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" pattern="[\s\S]{1,40}" required data-tipo="nombreContacto">
+                            <span class="input-message-error">Este campo no es valido</span>
+                        </div>
+                    </div>
+                    <div class="contact__form">
+                        <textarea name="texto" class="textArea" cols="20" rows="5" placeholder="¿Que desea buscar?" required maxlength="120"></textarea>
+                        <span class="input-message-error">Este campo no es valido</span>
+                    </div>
+                    <button class="enviar-mensaje-form">Enviar Mensaje</button>
                 </div>
-
-                <textarea name="texto" id="" cols="20" rows="5  " placeholder="¿Que desea buscar?" data-tipo="mensaje" required pattern="/^$|\s+/"></textarea>
-                <span class="input-message-error">Este campo no es valido</span>
-                <button>Enviar Mensaje</button>
-            </div>
+            </form>
         </div>
 
     </aside>
@@ -84,4 +90,5 @@
     </footer>
     <script type="module" src="../js/validaciones/app.js"></script>
 </body>
+
 </html>

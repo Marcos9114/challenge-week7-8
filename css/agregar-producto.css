@@ -40,7 +40,7 @@
     align-items: center;
 }
 
-.agregar-producto__arrastre.active{
+.agregar-producto__arrastre.active {
     background-color: #b8d4fe;
     color: black;
     border: 2px dashed #070d16;
@@ -53,7 +53,7 @@
     margin: 16px 32px 0px 32px;
 }
 
-#agregar-producto-text{
+#agregar-producto-text {
     margin-right: 8px;
     margin-left: 8px;
 }
@@ -108,6 +108,12 @@
     color: #a2a2a2;
 }
 
+.agregar-producto__textarea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .agregar-producto__boton {
     font-size: 1rem;
     font-weight: 100;
@@ -123,7 +129,7 @@
 
 /* creacion de clases que usaremos de forma dinámica con js*/
 
-.file-container{
+.file-container {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -131,15 +137,17 @@
     border: solid 1px #ddd;
 }
 
-#preview{
+#preview {
     margin-top: 10px;
+    color: #6B6B6B;
+    font-size: 14px;
 }
 
 .status-tex {
     padding: 0 10px;
 }
 
-.success{
+.success {
     color: #52ad5a;
 }
 
@@ -178,6 +186,7 @@
     .agregar-producto__nombre, .agregar-producto__precio {
         width: 90vw;
     }
+
     .agregar-producto__boton {
         width: 90vw;
     }
@@ -185,22 +194,25 @@
 
 
 @media screen and (max-width: 400px) {
-.agregar-producto__arrastre .icon-img, #agregar-producto-text, .agregar-producto__div-arrastre button{
-    display: none;
-}
-.agregar-producto__arrastre{
-    width: 100%;
-}
-.p-img{
-    display: none;
-}
+    .agregar-producto__arrastre .icon-img, #agregar-producto-text, .agregar-producto__div-arrastre button {
+        display: none;
+    }
+
+    .agregar-producto__arrastre {
+        width: 100%;
+    }
+
+    .p-img {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 400px) {
-    .icon-plus{
+    .icon-plus {
         display: none;
     }
-    .p-plus{
+
+    .p-plus {
         display: none;
     }
 }

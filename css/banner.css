@@ -40,8 +40,19 @@
   width: 15vw;
   height: 3vw;
   min-height: 40px;
-
   border: none;
+  cursor: pointer;
+}
+
+.banner__button:hover{
+  color: #ffffff;
+  background-color: #95bef5;
+}
+
+.banner__button:active{
+  color: #ffffff;
+  background-color: #0f3b74;
+  border: solid 2px #ffffff;
 }
 
 @media screen and (max-width: 768px) {

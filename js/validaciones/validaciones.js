@@ -1,6 +1,7 @@
 export function valida(input) {
     const tipoDeInput = input.dataset.tipo;
-  
+    console.log(tipoDeInput)
+    console.log()
     if (input.validity.valid) {
       input.parentElement.classList.remove("input-container--invalid");
       input.parentElement.querySelector(".input-message-error").innerHTML = "";
@@ -19,6 +20,14 @@ export function valida(input) {
   ];
   
   const mensajesDeError = {
+    nombreContacto:{
+      valueMissing: "El campo nombre no puede estar vacío",
+      patternMismatch: "El nombre no puede superar los 40 caracteres.",
+    },
+    nombreProducto: {
+      valueMissing: "El campo nombre no puede estar vacío",
+      patternMismatch: "El nombre no puede superar los 20 caracteres.",
+    },
     nombre: {
       valueMissing: "El campo nombre no puede estar vacío",
     },
@@ -30,10 +39,16 @@ export function valida(input) {
       valueMissing: "El campo contraseña no puede en blanco",
       patternMismatch: "El campo contraseña no puede estar vacío",
     },
-    mensaje: {
-      valueMissing: "Este campo no puede estar vacío",
-      patternMismatch: "El estado debe contener entre 10 a 40 caracteres.",
+    precio: {
+      valueMissing: "El precio no puede estar en blanco",
     },
+    inputDragAndDrop: {
+      patternMismatch: "Debes cargar al menos una imagen del producto" 
+    },
+    // mensaje: {
+    //   valueMissing: "Este campo no puede estar vacío",
+    //   patternMismatch: "El estado debe contener entre 10 a 40 caracteres.",
+    // },
   };
 
   
@@ -49,6 +64,4 @@ export function valida(input) {
     });
     return mensaje;
   }
-  
-
   

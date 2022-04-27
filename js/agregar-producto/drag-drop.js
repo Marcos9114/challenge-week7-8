@@ -9,7 +9,7 @@ button.addEventListener("click", (e) => {
 });
 
 input.addEventListener("change", (e) => {
-  files = this.files;
+  files = input.files;
   dropArea.classList.add("active");
   showFiles(files);
   dropArea.classList.remove("active");
@@ -49,7 +49,6 @@ const showFiles = (files) => {
 
 const processFile = (file) => {
   const docType = file.type;
-  console.log(docType);
   const validExtensions = ["image/jpeg", "image/jpg", "image/png", "image/gif"];
 
   if (validExtensions.includes(docType)) {
@@ -58,10 +57,10 @@ const processFile = (file) => {
     const id = `file-${Math.random().toString(32).substring(7)}`;
 
     fileReader.addEventListener("load", (e) => {
-      const fileUrl = file.result;
+      const fileUrl = fileReader.result;
       const image = `
                 <div id=${id} class="file-container">
-                    <img src=${fileUrl} alt=${file.name} width=50px>
+                    <img src=${fileUrl} alt=${file.name}  height="32px">
                     <div class="status">
                         <span>${file.name}</span>   
                         <span class="status-text">
@@ -70,15 +69,37 @@ const processFile = (file) => {
                     </div>
                 </div>
             `;
-            const html = document.querySelector("#preview").innerHTML;
-            document.querySelector("#preview").innerHTML = image + html; //html = image + html
+      const html = document.querySelector("#preview").innerHTML;
+      document.querySelector("#preview").innerHTML = image + html; //html = image + html
     });
     fileReader.readAsDataURL(file);
-
-
-
+    uploadFile(file, id);
   } else {
     //archivo nop valido
     alert("no es un archivo válido");
   }
 };
+
+async function uploadFile(file, id) {
+  const formData = new FormData();
+  formData.append("file", file);
+
+  try {
+    const response = await fetch("http://localhost:3000/upload", {
+      method: "POST",
+      body: formData,
+    });
+
+    const responseText = await response.text();
+    console.log(responseText);
+    document.querySelector(
+      `#${id} .status-text`
+    ).innerHTML = `<span class=success> Archivo subido correctamente...</span>`;
+    //adicionalmente agrego al input de validación
+    // document.querySelector("#input-validacion__dragAndDrop").value = "Archivo cargado correctamente - validacion ok"
+  } catch (error) {
+    document.querySelector(
+      `#${id} .status-text`
+    ).innerHTML = `<span class=failure> El archivo no puede subirse...</span>`;
+  }
+}
